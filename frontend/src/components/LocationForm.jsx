@@ -6,6 +6,7 @@ import { getAttractions } from "../services/geo";
 function LocationForm() {
   const location = useStore((state) => state.location);
   const setLocation = useStore((state) => state.setLocation);
+  const setAttractions = useStore((state) => state.setAttractions);
 
   const handleInput = (e) => {
     const newLocation = {
@@ -28,14 +29,14 @@ function LocationForm() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    getAttractions(location);
+    setAttractions(await getAttractions(location));
   };
 
   return (
-    <div>
-      <form className="flex justify-center mt-6 w-[40%] mx-auto">
+    <div className="bg-gray-100 p-4 rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] max-w-[500px]">
+      <form className="flex justify-center mt-6 w-[40%] mx-auto ">
         <div className="flex flex-col">
           <div className="flex gap-10">
             <div>

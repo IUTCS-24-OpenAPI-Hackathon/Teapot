@@ -1,19 +1,16 @@
-import { useState } from "react";
-import useStore from "./store/store";
-import Button from "./components/Button";
-import { getAttractions } from "./services/geo";
+import Cards from "./components/Cards";
 import Header from "./components/Header";
 import LocationForm from "./components/LocationForm";
 
 function App() {
-  const location = useStore((state) => state.location);
-  const setLocation = useStore((state) => state.setLocation);
-
   return (
     <>
       <Header />
       <main>
-        <LocationForm />
+        <div className="flex mt-6 p-4 gap-8 justify-evenly">
+          <Cards />
+          <LocationForm />
+        </div>
       </main>
     </>
   );

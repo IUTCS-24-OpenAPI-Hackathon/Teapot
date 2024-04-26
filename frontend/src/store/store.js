@@ -6,6 +6,9 @@ const useStore = create((set) => ({
     lon: "",
     radius: "",
   },
+  attractions: [],
+  setAttractions: (newAttractions) =>
+    set(() => ({ attractions: newAttractions })),
   setLocation: (newLocation) => set(() => ({ location: newLocation })),
 }));
 
