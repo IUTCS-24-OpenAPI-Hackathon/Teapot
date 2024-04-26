@@ -1,3 +1,4 @@
+import json
 import requests
 
 def get_places_of_interest(latitude, longitude, radius=1000):
@@ -28,15 +29,27 @@ def get_places_of_interest(latitude, longitude, radius=1000):
     """
     response = requests.get(overpass_url, params={'data': query})
     data = response.json()
-    # print(data)
     return data
 
+def save_json(data, filename):
+    with open(filename, 'w') as f:
+        json.dump(data, f, indent=4)
+
 def main():
-    latitude = 21.415497395102097
-    longitude = 91.98328095123344
+    latitude, longitude = 52.347177, 4.902381
+    
     radius = 1000  # in meters
     
     data = get_places_of_interest(latitude, longitude, radius)
-    print(data)
+    save_json(data, 'amsterdam.json')
+    
+    # Print organized data
+    for element in data.get('elements', []):
+        if 'tags' in element:
+            print(f"Type: {element['type']}, ID: {element['id']}")
+            for key, value in element['tags'].items():
+                print(f"  {key}: {value}")
+            print()
+
 if __name__ == "__main__":
     main()
