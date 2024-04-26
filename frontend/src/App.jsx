@@ -1,6 +1,7 @@
 import Cards from "./components/Cards";
 import Header from "./components/Header";
 import LocationForm from "./components/LocationForm";
+import Map from "./components/Map";
 import useStore from "./store/store";
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
           {!!attractions.length && <Cards />}
           <LocationForm />
         </div>
+
+        <Map />
       </main>
     </>
   );

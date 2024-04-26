@@ -28,3 +28,9 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+.leaflet-container {
+  height: 100dvh;
+  width: 70dvw;
+  margin: 0 auto;
+}
