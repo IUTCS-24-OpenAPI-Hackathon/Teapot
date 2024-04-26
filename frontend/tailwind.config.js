@@ -6,7 +6,11 @@ export default {
       colors: {
         dark: "#121212",
         bright: "#eee",
+        purple: "#7622e2",
       },
+    },
+    fontFamily: {
+      grotesk: ["Hanken Grotesk", "sans-serif"],
     },
   },
   plugins: [],
