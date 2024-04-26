@@ -7,6 +7,7 @@ function LocationForm() {
   const location = useStore((state) => state.location);
   const setLocation = useStore((state) => state.setLocation);
   const setAttractions = useStore((state) => state.setAttractions);
+  const setQuery = useStore((state) => state.setQuery);
 
   const handleInput = (e) => {
     const newLocation = {
@@ -31,11 +32,18 @@ function LocationForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setAttractions(await getAttractions(location));
+    setQuery({
+      lat: Number(location.lat),
+      lon: Number(location.lon),
+      radius: Number(location.radius) * 1000,
+    });
+    setAttractions(
+      await getAttractions({ ...location, radius: location.radius * 1000 })
+    );
   };
 
   return (
-    <div className="bg-gray-100 p-4 rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] max-w-[500px]">
+    <div className="bg-gray-100 p-4 rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] max-w-[500px] max-h-[258px]">
       <form className="flex justify-center mt-6 w-[40%] mx-auto ">
         <div className="flex flex-col">
           <div className="flex gap-10">

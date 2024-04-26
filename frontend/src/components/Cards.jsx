@@ -9,6 +9,7 @@ function Cards() {
         <Card
           name={item.name}
           description={item.description}
+          key={item.key}
         />
       ))}
     </div>
