@@ -88,6 +88,49 @@ async function getAttractions(
   return data;
 }
 
+async function getAttractionsInCity(
+  latitude: number,
+  longitude: number,
+  city: string
+) {
+  const radius = 150000;
+  const overpassUrl = "https://lz4.overpass-api.de/api/interpreter"; // Using LZ4 compressed endpoint for faster responses
+  const query = `
+            [out:json];
+            (
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["tourism"~".*"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["historical"~".*"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["natural"~".*"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["leisure"~".*"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["shop"~".*"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["artwork_type"~".*"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["facility:nature"~".*"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["religion"~".*"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["parks"~".*"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["amenity"~"place_of_worship"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["amenity"~"restaurant"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["amenity"~"cafe"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["amenity"~"fast_food"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["amenity"~"library"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["amenity"~"bar"];
+              node(around:${radius},${latitude},${longitude})["addr:city"="${city}"]["amenity"~"pub"];
+            );
+            out body;
+            >;
+            out skel qt;
+        `;
+  const response = await fetch(overpassUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: `data=${encodeURIComponent(query)}`,
+  });
+  const data = (await response.json()) as OSMApiResponseType;
+
+  return data;
+}
+
 export const findAttractionsAroundCoords = async (
   lat: number,
   lon: number,
@@ -134,6 +177,75 @@ export const findAttractionsAroundCoords = async (
         description.push("Park");
       }
 
+      if (a.tags.amenity) {
+        description.push(a.tags.amenity);
+      }
+
+      return {
+        id: a.id,
+        name: a.tags?.name,
+        description: description,
+        lat: a.lat,
+        lon: a.lon,
+        coords: [a.lat, a.lon],
+      };
+    }
+  });
+
+  return response.filter((r) => {
+    if (r) {
+      return r;
+    }
+  });
+};
+
+export const findAttractionsAroundCities = async (
+  lat: number,
+  lon: number,
+  city: string
+) => {
+  const attractions = await getAttractionsInCity(lat, lon, city);
+
+  const response = attractions.elements.map((a) => {
+    if (a.tags?.name) {
+      const description = [];
+
+      if (a.tags.tourism) {
+        description.push("Tourism");
+      }
+
+      if (a.tags.natural) {
+        description.push("Natural");
+      }
+
+      if (a.tags.historical) {
+        description.push("Historical");
+      }
+
+      if (a.tags.leisure) {
+        description.push("Leisure");
+      }
+
+      if (a.tags.shop) {
+        description.push("Shop");
+      }
+
+      if (a.tags["facility:nature"]) {
+        description.push("Nature");
+      }
+
+      if (a.tags.artwork_type) {
+        description.push("Artwork");
+      }
+      if (a.tags.religion) {
+        description.push("Religion");
+      }
+
+      if (a.tags.parks) {
+        description.push("Park");
+      }
+
+      // TODO: write for amenity as well
       if (a.tags.amenity) {
         description.push(a.tags.amenity);
       }
