@@ -13,23 +13,13 @@ export class User {
 
   @Column("text")
   email: string;
+
+  @Column("text")
+  password: string;
 }
 
 export const getUserRepository = () => {
-  const repo = AppDataSource.getRepository(User);
-
-  // this way i can write the db queries and make sure db queries work before using them in services
-  const userRepo = {
-    // createUser: () => {
-    //   repo.findOne(())
-    // },
-
-    findUserWithId: (id: number) => {
-      // do sth here
-      return;
-    },
-  };
-  return userRepo;
+  return AppDataSource.getRepository(User);
 };
 
 // deifne zod schema here following the class definition above
@@ -37,6 +27,7 @@ export const userSchema = z.object({
   id: z.number(),
   name: z.string().optional(),
   email: z.string().optional(),
+  password: z.string().optional(),
 });
 
 export type UserRepository = ReturnType<typeof getUserRepository>;
