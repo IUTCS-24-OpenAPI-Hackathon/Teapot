@@ -63,31 +63,45 @@ export const registerUserRoutes = (app: Express) => {
     }
   });
 
-  // app.post("/api/loginUser", async (req, res) => {
-  //   const inputSchema = z.object({
-  //     email: z.string(),
-  //     password: z.string(),
-  //   });
+  app.post("/api/loginUser", async (req, res) => {
+    const inputSchema = z.object({
+      email: z.string(),
+      password: z.string(),
+    });
 
-  //   try {
-  //     const { email, password } = inputSchema.parse(req.body)
-  //     const userRepo = getUserRepository();
-  //     const user = await userRepo.findOne({
-  //       email: email,
-  //       password: bcrypt.
-  //     })
+    try {
+      const { email, password } = inputSchema.parse(req.body);
+      const userRepo = getUserRepository();
+      const user = await userRepo.findOne({
+        where: {
+          email: email,
+        },
+      });
 
-  //     console.log(user);
+      if (!user) {
+        res.status(400).json({
+          error: "User not found",
+        });
+        return;
+      }
+      const passwordMatched = await bcrypt.compare(password, user.password);
 
-  //     if (user && (await user.matchPassword(password))) {
-  //       setJwtCookie(res, user._id, "30d");
-  //       res.json(user);
-  //     } else {
-  //       sendError(res, 401, "Invalid email or password");
-  //     }
-  //   }
-
-  // });
+      if (user && passwordMatched) {
+        setJwtCookie(res, user.id, "30d");
+        res.json(user);
+      } else {
+        res.status(400).json({
+          error: "Password did not match",
+        });
+        return;
+      }
+    } catch (e) {
+      console.log(e);
+      res.status(400).json({
+        error: e,
+      });
+    }
+  });
 
   app.post("/api/logoutUser", (req, res) => {
     clearJwtCookie(res);
@@ -96,5 +110,7 @@ export const registerUserRoutes = (app: Express) => {
     });
   });
 
-  // app.post("/api/addReview")
+  app.post("/api/addReview", (req, res) => {
+    // add a check for the
+  });
 };
