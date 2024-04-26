@@ -38,10 +38,10 @@ def save_json(data, filename):
 def main():
     latitude, longitude = 52.347177, 4.902381
     
-    radius = 1000  # in meters
+    radius = 100  # in meters
     
     data = get_places_of_interest(latitude, longitude, radius)
-    save_json(data, 'amsterdam.json')
+    # save_json(data, 'amsterdam.json')
     
     # Print organized data
     for element in data.get('elements', []):
