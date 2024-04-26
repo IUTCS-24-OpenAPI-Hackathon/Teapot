@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:5000/api";
+const baseUrl = "http://localhost:3000/api";
 
 const signup = async (info) => {
-  const res = await axios.post(`${baseUrl}/user/signup`, info);
+  const res = await axios.post(`${baseUrl}/signup`, info);
   localStorage.setItem("user", JSON.stringify(res.data));
   return res.data;
 };

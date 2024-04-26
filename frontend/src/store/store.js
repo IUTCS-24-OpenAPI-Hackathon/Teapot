@@ -15,6 +15,7 @@ const useStore = create((set) => ({
   selectedLocation: {},
   store: "",
   attractions: [],
+  user: {},
   setAttractions: (newAttractions) =>
     set(() => ({ attractions: newAttractions })),
   setLocation: (newLocation) => set(() => ({ location: newLocation })),
@@ -24,6 +25,7 @@ const useStore = create((set) => ({
     set((state) => ({ shouldUseSearch: !state.shouldUseSearch })),
   setSelectedLocation: (newLocation) =>
     set(() => ({ selectedLocation: newLocation })),
+  setUser: (newUser) => set(() => ({ user: newUser })),
 }));
 
 export default useStore;

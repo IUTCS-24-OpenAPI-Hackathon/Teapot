@@ -33,10 +33,10 @@ function Signup() {
         password: info.password,
       });
       setUser(user);
+      console.log(user);
       setInfo({ name: "", email: "", password: "" });
-      navigate("/verify");
     } catch (err) {
-      console.log(err.response.data);
+      console.log(err);
     }
   };
 
