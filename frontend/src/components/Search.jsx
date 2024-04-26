@@ -41,6 +41,7 @@ function Search() {
       lat: place.geometry.coordinates[1],
       lon: place.geometry.coordinates[0],
     };
+    console.log(place);
     setSugg([]);
     setSearch("");
     setArea(place);
