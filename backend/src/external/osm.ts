@@ -139,6 +139,7 @@ export const findAttractionsAroundCoords = async (
       }
 
       return {
+        id: a.id,
         name: a.tags?.name,
         description: description,
         lat: a.lat,
