@@ -1,5 +1,11 @@
 import axios from "axios";
-const baseURL = "";
+
+const getAttractionsFromRadius = async (info) => {
+  const url = "http://localhost:3000/getAttractions";
+  const res = await axios.post(url, info);
+  console.log(res.data);
+  return res.data;
+};
 
 const getAttractions = async (info) => {
   const url = "http://localhost:3000/getAttractionsFromCity";
@@ -8,4 +14,4 @@ const getAttractions = async (info) => {
   return res.data;
 };
 
-export { getAttractions };
+export { getAttractions, getAttractionsFromRadius };

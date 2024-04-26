@@ -4,10 +4,12 @@ import MarkerClusterGroup from "react-leaflet-cluster";
 import marker from "../assets/marker.png";
 import useStore from "../store/store";
 import ChangeView from "./ChangeView";
+import { Link } from "react-router-dom";
 
 function Map() {
   const query = useStore((state) => state.query);
   const attractions = useStore((state) => state.attractions);
+  const setSelectedLocation = useStore((state) => state.setSelectedLocation);
 
   const markers = [
     {
@@ -31,6 +33,10 @@ function Map() {
 
   const bd = [23.7946963098031, 90.40126219418919];
 
+  const handleSeeMore = (att) => {
+    setSelectedLocation(att);
+  };
+
   return (
     <MapContainer>
       <ChangeView
@@ -44,9 +50,20 @@ function Map() {
             key={att.id}
             position={att.coords}
             icon={customIcon}
+            eventHandlers={{
+              click: (e) => {
+                handleSeeMore(att);
+              },
+            }}
           >
             <Popup>
               <h2 className="font-bold text-xl">{att.name}</h2>
+              <Link
+                className="text-blue-300"
+                to="/location"
+              >
+                See more
+              </Link>
             </Popup>
           </Marker>
         ))}

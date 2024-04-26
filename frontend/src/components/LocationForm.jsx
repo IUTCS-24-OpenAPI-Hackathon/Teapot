@@ -1,7 +1,7 @@
 import Button from "./Button";
 import useStore from "../store/store";
 import Input from "./Input";
-import { getAttractions } from "../services/geo";
+import { getAttractionsFromRadius } from "../services/geo";
 
 function LocationForm() {
   const location = useStore((state) => state.location);
@@ -38,12 +38,15 @@ function LocationForm() {
       radius: Number(location.radius) * 1000,
     });
     setAttractions(
-      await getAttractions({ ...location, radius: location.radius * 1000 })
+      await getAttractionsFromRadius({
+        ...location,
+        radius: location.radius * 1000,
+      })
     );
   };
 
   return (
-    <div className="bg-gray-100 p-4 rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] max-w-[500px] max-h-[258px]">
+    <div className="bg-gray-100 p-4 rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] max-w-[500px] max-h-[258px] mx-auto">
       <form className="flex justify-center mt-6 w-[40%] mx-auto ">
         <div className="flex flex-col">
           <div className="flex gap-10">

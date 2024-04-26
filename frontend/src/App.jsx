@@ -9,9 +9,12 @@ import RequireAuth from "./components/RequireAuth";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Home from "./components/Home";
+import ModalBg from "./components/ModalBg";
+import LocationDetail from "./components/LocationDetail";
 
 function App() {
   const attractions = useStore((state) => state.attractions);
+  const selectedLocation = useStore((state) => state.selectedLocation);
 
   return (
     <>
@@ -24,15 +27,24 @@ function App() {
           <Route
             path="/"
             element={<Home />}
-          />
-          <Route
-            path="login"
-            element={<Login />}
-          />
-          <Route
-            path="signup"
-            element={<Signup />}
-          />
+          >
+            <Route
+              path="/location"
+              element={
+                <ModalBg>
+                  <LocationDetail location={selectedLocation} />
+                </ModalBg>
+              }
+            />
+            <Route
+              path="login"
+              element={<Login />}
+            />
+            <Route
+              path="signup"
+              element={<Signup />}
+            />
+          </Route>
           <Route element={<RequireAuth />}></Route>
         </Route>
       </Routes>
