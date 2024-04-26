@@ -1,0 +1,405 @@
+{
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.1 084b4234",
+    "osm3s": {
+        "timestamp_osm_base": "2024-04-26T10:10:16Z",
+        "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+        {
+            "type": "node",
+            "id": 1756484460,
+            "lat": 21.423671,
+            "lon": 91.9803041,
+            "tags": {
+                "addr:housenumber": "H-6 Black -B",
+                "addr:postcode": "4700",
+                "addr:street": "Kolatoli Main Road",
+                "email": "kabirhcr@gmail.com",
+                "name": "Hotel Coastal Peace",
+                "opening_hours": "24/7",
+                "operator": "Hotel Coastal Peace",
+                "phone": "+8801779803971",
+                "tourism": "hotel",
+                "website": "http://www.cotelcoastalpeace.com"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1756484461,
+            "lat": 21.422425,
+            "lon": 91.9813529,
+            "tags": {
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1756484462,
+            "lat": 21.4230043,
+            "lon": 91.981039,
+            "tags": {
+                "addr:street": "Kolatoli Road",
+                "email": "hotelcoxshilton@gmail.com",
+                "internet_access": "wlan",
+                "phone": "+881817380399",
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1756484463,
+            "lat": 21.4238283,
+            "lon": 91.9808353,
+            "tags": {
+                "addr:housenumber": "47",
+                "addr:postcode": "4700",
+                "addr:street": "Kolatoli Main Road",
+                "email": "kabirhcr@gmail.com",
+                "name:en": "Hotel Coral Reef",
+                "opening_hours": "24/7",
+                "operator": "Coral Reef",
+                "phone": "+8801779803971",
+                "tourism": "hotel",
+                "website": "http://www.coralreefbd.com"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1756484464,
+            "lat": 21.4226372,
+            "lon": 91.9808728,
+            "tags": {
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1756484466,
+            "lat": 21.4234662,
+            "lon": 91.9814923,
+            "tags": {
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1756484467,
+            "lat": 21.422063,
+            "lon": 91.9812081,
+            "tags": {
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1756484468,
+            "lat": 21.4240829,
+            "lon": 91.9807225,
+            "tags": {
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1756484469,
+            "lat": 21.4229019,
+            "lon": 91.9807333,
+            "tags": {
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1756484471,
+            "lat": 21.4233289,
+            "lon": 91.9804759,
+            "tags": {
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1803177016,
+            "lat": 21.4221729,
+            "lon": 91.981141,
+            "tags": {
+                "amenity": "restaurant"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1803195137,
+            "lat": 21.4218431,
+            "lon": 91.9809428,
+            "tags": {
+                "amenity": "restaurant",
+                "name": "Sahara Restaurant"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1803234985,
+            "lat": 21.4209394,
+            "lon": 91.9817231,
+            "tags": {
+                "amenity": "restaurant"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1803245353,
+            "lat": 21.4199132,
+            "lon": 91.9819108,
+            "tags": {
+                "name": "Uni Resort ",
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1803250768,
+            "lat": 21.4198508,
+            "lon": 91.982391,
+            "tags": {
+                "amenity": "restaurant"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1803250771,
+            "lat": 21.4199555,
+            "lon": 91.9818441,
+            "tags": {
+                "amenity": "restaurant"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1803252476,
+            "lat": 21.4195862,
+            "lon": 91.9825677,
+            "tags": {
+                "amenity": "restaurant",
+                "name": "Chicken King (Malaysia)"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1803255511,
+            "lat": 21.4192713,
+            "lon": 91.9822944,
+            "tags": {
+                "name": "Resort Islandia",
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1803287883,
+            "lat": 21.4219931,
+            "lon": 91.9776622,
+            "tags": {
+                "amenity": "restaurant",
+                "name": "Sea-inn restaurant"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1803304996,
+            "lat": 21.4221678,
+            "lon": 91.9769005,
+            "tags": {
+                "amenity": "restaurant"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2496469199,
+            "lat": 21.4212032,
+            "lon": 91.9786061,
+            "tags": {
+                "amenity": "restaurant",
+                "name": "Mermaid Cafe"
+            }
+        },
+        {
+            "type": "node",
+            "id": 4708001401,
+            "lat": 21.422869,
+            "lon": 91.9818074,
+            "tags": {
+                "addr:housenumber": "PWD Housing P63",
+                "addr:postcode": "4700",
+                "addr:street": "Kolatoli Road",
+                "email": "kabirhcr@gmail.com",
+                "name:en": "Bay Touch Hotel Coxs' Bazar",
+                "operator": "missiontourism",
+                "phone": "+8801915458398",
+                "tourism": "hotel",
+                "website": "http://www.baytuch.com"
+            }
+        },
+        {
+            "type": "node",
+            "id": 4709507290,
+            "lat": 21.4203938,
+            "lon": 91.9819307,
+            "tags": {
+                "addr:housenumber": "3 black c",
+                "addr:postcode": "4700",
+                "addr:street": "Kolatoli Main Road",
+                "email": "kabirhcr@gmail.com",
+                "name:en": "Bashati Bay Resort",
+                "opening_hours": "24/7",
+                "operator": "Bashati Bay Resort",
+                "phone": "+8801779803971",
+                "tourism": "hotel",
+                "website": "http://www.bashatibayresort.com"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5142167126,
+            "lat": 21.4132194,
+            "lon": 91.9853926,
+            "tags": {
+                "name": "Sandy land \u09b8\u09cd\u09af\u09be\u09a8\u09cd\u09a1\u09c0 \u09b2\u09cd\u09af\u09be\u09a8\u09cd\u09a1",
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5142172382,
+            "lat": 21.4147557,
+            "lon": 91.9834175,
+            "tags": {
+                "amenity": "restaurant",
+                "name": "Rock n Roll cafe \u09b0\u0995 \u098f\u09a8 \u09b0\u09cb\u09b2 \u0995\u09be\u09ab\u09c7"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5142172386,
+            "lat": 21.4149607,
+            "lon": 91.9832717,
+            "tags": {
+                "amenity": "restaurant",
+                "name": "Rain Drop cafe and Reaturent"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5142176464,
+            "lat": 21.4150053,
+            "lon": 91.9833723,
+            "tags": {
+                "amenity": "restaurant",
+                "name": "Angel Beach Cafe \u098f\u099e\u09cd\u099c\u09c7\u09b2 \u09ac\u09bf\u099a \u0995\u09cd\u09af\u09be\u09ab\u09c7 \u09a6\u09c7\u09ac\u09a6\u09c2\u09a4 \u09ac\u09bf\u099a \u0995\u09cd\u09af\u09be\u09ab\u09c7 \u098f\u099e\u09cd\u099c\u09c7\u09b2 \u09ac\u09bf\u099a \u0995\u09cd\u09af\u09be\u09ab\u09c7"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5142184417,
+            "lat": 21.4150523,
+            "lon": 91.9832618,
+            "tags": {
+                "amenity": "restaurant",
+                "name": "Popeyes Chicken & Sea Food \u09aa\u09aa\u09be\u09df\u09c7\u09b8 \u099a\u09bf\u0995\u09c7\u09a8 \u098f\u09a8\u09cd\u09a1 \u09b8\u09bf \u09ab\u09c1\u09a1"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5142225073,
+            "lat": 21.4160114,
+            "lon": 91.9840156,
+            "tags": {
+                "amenity": "restaurant",
+                "name": "New Boishakhi Restaurant and Birini House"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5205892821,
+            "lat": 21.4234896,
+            "lon": 91.9808176,
+            "tags": {
+                "addr:housenumber": "04",
+                "addr:postcode": "4758",
+                "internet_access": "wlan",
+                "name": "Cos'Bazar",
+                "phone": "+8801780441056",
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5607154721,
+            "lat": 21.4159066,
+            "lon": 91.9823197,
+            "tags": {
+                "amenity": "restaurant",
+                "name:en": "Sea Lamp Beach Cafe"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6108816786,
+            "lat": 21.4195919,
+            "lon": 91.9837668,
+            "tags": {
+                "addr:postcode": "4700",
+                "addr:street": "Kalatali Road",
+                "name:en": "Needs Bay Watch",
+                "opening_hours": "24/7",
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6594140185,
+            "lat": 21.4172025,
+            "lon": 91.9814202,
+            "tags": {
+                "name:en": "Divine Eco Resort",
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 7273990486,
+            "lat": 21.4224492,
+            "lon": 91.982037,
+            "tags": {
+                "addr:street": "Kolatoli Road",
+                "email": "info@hilltowerhotelandresort.com",
+                "internet_access": "wlan",
+                "name:en": "Hill Tower Hotel and Resort",
+                "phone": "01761492310",
+                "tourism": "hotel",
+                "website": "http://www.hilltowerhotelandresort.com"
+            }
+        },
+        {
+            "type": "node",
+            "id": 8510413260,
+            "lat": 21.4189984,
+            "lon": 91.9835165,
+            "tags": {
+                "amenity": "restaurant",
+                "name": "Ocean Dine"
+            }
+        },
+        {
+            "type": "node",
+            "id": 8510436159,
+            "lat": 21.4191897,
+            "lon": 91.9835127,
+            "tags": {
+                "building:levels": "5",
+                "name": "Ocean Palace",
+                "tourism": "hotel"
+            }
+        }
+    ]
+}

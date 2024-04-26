@@ -1,0 +1,1242 @@
+{
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.1 084b4234",
+    "osm3s": {
+        "timestamp_osm_base": "2024-04-26T11:59:40Z",
+        "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+        {
+            "type": "node",
+            "id": 1545670721,
+            "lat": 12.9209236,
+            "lon": 100.8977767,
+            "tags": {
+                "brand": "Kawasaki;Repsol;Shark;Real;Givi;Suomy;Bimola",
+                "motorcycle:rental": "no",
+                "motorcycle:repair": "no",
+                "motorcycle:sales": "yes",
+                "motorcycle:type": "sportbike;dualsport",
+                "name": "Kawasaki Big Bikes Pattaya",
+                "shop": "motorcycle",
+                "website": "https://www.kawasaki.co.th/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1563466677,
+            "lat": 12.921723,
+            "lon": 100.8981154,
+            "tags": {
+                "brand": "FamilyMart",
+                "brand:wikidata": "Q1191685",
+                "name": "FamilyMart",
+                "shop": "convenience",
+                "website": "https://www.familymart.co.th/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1563466679,
+            "lat": 12.9191593,
+            "lon": 100.8972517,
+            "tags": {
+                "name": "Son Air and Sound",
+                "shop": "car_parts"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1563466686,
+            "lat": 12.9217467,
+            "lon": 100.8974408,
+            "tags": {
+                "addr:street": "\u0e16\u0e19\u0e19\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17",
+                "name": "\u0e0a.\u0e0a\u0e25\u0e1a\u0e38\u0e23\u0e35\u0e41\u0e1a\u0e15\u0e40\u0e15\u0e2d\u0e23\u0e35\u0e48",
+                "shop": "car_parts"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1563471773,
+            "lat": 12.9208578,
+            "lon": 100.8970792,
+            "tags": {
+                "addr:street": "\u0e16\u0e19\u0e19\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17",
+                "brand": "Honda",
+                "brand:wikidata": "Q9584",
+                "motorcycle:sales": "yes",
+                "motorcycle:type": "sportbike",
+                "name": "Honda Big Wing Pattaya",
+                "shop": "motorcycle",
+                "website": "https://www.aphonda.co.th/hondabigbike/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1563471787,
+            "lat": 12.9169965,
+            "lon": 100.8965825,
+            "tags": {
+                "alt_name": "7-11",
+                "brand": "7-Eleven",
+                "brand:website": "http://www.7eleven.co.th/",
+                "brand:wikidata": "Q259340",
+                "brand:wikipedia": "th:\u0e40\u0e0b\u0e40\u0e27\u0e48\u0e19 \u0e2d\u0e35\u0e40\u0e25\u0e1f\u0e40\u0e27\u0e48\u0e19",
+                "name": "7-Eleven",
+                "name:en": "7-Eleven",
+                "shop": "convenience"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1563471791,
+            "lat": 12.9176251,
+            "lon": 100.8968387,
+            "tags": {
+                "brand": "FamilyMart",
+                "brand:wikidata": "Q1191685",
+                "name": "FamilyMart",
+                "shop": "convenience",
+                "website": "https://www.familymart.co.th/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1563484329,
+            "lat": 12.9163786,
+            "lon": 100.8927513,
+            "tags": {
+                "brand": "Harley-Davidson",
+                "brand:wikidata": "Q192814",
+                "email": "ironhorsepattaya@gmail.com",
+                "motorcycle:repair": "yes",
+                "motorcycle:sales": "yes",
+                "motorcycle:type": "chopper",
+                "name": "Iron Horse",
+                "phone": "+66 84 1112889",
+                "shop": "motorcycle",
+                "website": "http://www.ironhorsepattaya.com/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1563484331,
+            "lat": 12.9169301,
+            "lon": 100.892998,
+            "tags": {
+                "email": "narabrotherhood9@outlook.co.th",
+                "motorcycle:repair": "yes",
+                "motorcycle:type": "chopper",
+                "name": "Speed Up",
+                "phone": "+66 85 2796893;+66 89 9398740",
+                "shop": "motorcycle"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1804899638,
+            "lat": 12.9237702,
+            "lon": 100.8963608,
+            "tags": {
+                "amenity": "cafe",
+                "cuisine": "coffee_shop",
+                "name": "Ninth Cafe"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1808840938,
+            "lat": 12.9144986,
+            "lon": 100.8944089,
+            "tags": {
+                "brand": "Office Depot",
+                "brand:wikidata": "Q1337797",
+                "name": "Office Depot",
+                "shop": "stationery"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1839602843,
+            "lat": 12.9116279,
+            "lon": 100.8964454,
+            "tags": {
+                "name": "Geco Light and Decor",
+                "opening_hours": "Mo-Su 09:00-18:00",
+                "shop": "doityourself"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1854124281,
+            "lat": 12.920001,
+            "lon": 100.8942998,
+            "tags": {
+                "name": "Jagger's German Bookshop",
+                "shop": "books"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1854130892,
+            "lat": 12.9190992,
+            "lon": 100.8926399,
+            "tags": {
+                "addr:street": "\u0e1e\u0e31\u0e17\u0e22\u0e32\u0e43\u0e15\u0e49",
+                "name": "Seat Boat",
+                "shop": "boat"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1879020276,
+            "lat": 12.9096256,
+            "lon": 100.8997209,
+            "tags": {
+                "alt_name": "7-11",
+                "brand": "7-Eleven",
+                "brand:website": "http://www.7eleven.co.th/",
+                "brand:wikidata": "Q259340",
+                "brand:wikipedia": "th:\u0e40\u0e0b\u0e40\u0e27\u0e48\u0e19 \u0e2d\u0e35\u0e40\u0e25\u0e1f\u0e40\u0e27\u0e48\u0e19",
+                "name": "7-Eleven",
+                "name:en": "7-Eleven",
+                "shop": "convenience"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1879020277,
+            "lat": 12.9096618,
+            "lon": 100.8986008,
+            "tags": {
+                "brand": "FamilyMart",
+                "brand:wikidata": "Q1191685",
+                "name": "FamilyMart",
+                "shop": "convenience",
+                "website": "https://www.familymart.co.th/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1972311637,
+            "lat": 12.9198335,
+            "lon": 100.8938339,
+            "tags": {
+                "amenity": "bar",
+                "name": "Telephone Bar"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2066813743,
+            "lat": 12.909436,
+            "lon": 100.8998422,
+            "tags": {
+                "amenity": "bar",
+                "name": "The Pub"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2066813746,
+            "lat": 12.9095228,
+            "lon": 100.8999475,
+            "tags": {
+                "amenity": "cafe",
+                "name": "Friendship Coffee Shop"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2066813749,
+            "lat": 12.9096773,
+            "lon": 100.8984907,
+            "tags": {
+                "amenity": "bar",
+                "name": "Rod's Bar"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2154097474,
+            "lat": 12.9143575,
+            "lon": 100.8942173,
+            "tags": {
+                "name": "Modernform",
+                "shop": "furniture"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2154097475,
+            "lat": 12.9148237,
+            "lon": 100.8945998,
+            "tags": {
+                "name": "Super Sports",
+                "shop": "sports"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2460073871,
+            "lat": 12.9186435,
+            "lon": 100.8915257,
+            "tags": {
+                "amenity": "restaurant",
+                "name": "Vientiane",
+                "name:zh": "\u6c38\u73cd\u9910\u5ef3"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2460078021,
+            "lat": 12.9095645,
+            "lon": 100.8963902,
+            "tags": {
+                "email": "suriyamusicpattaya@gmail.com",
+                "name": "Suriya Music",
+                "opening_hours": "09:00-21:30",
+                "phone": "+66 38 378039",
+                "shop": "musical_instrument",
+                "website": "http://suriyamusicpattaya.com"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2641813563,
+            "lat": 12.9185659,
+            "lon": 100.8971375,
+            "tags": {
+                "name": "Patayatuntivat",
+                "shop": "doityourself"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2728983155,
+            "lat": 12.9190246,
+            "lon": 100.8951454,
+            "tags": {
+                "name": "Dr. Pin Serviced Apartment",
+                "phone": "+66 38 411041,+66 81 8418682",
+                "tourism": "apartment"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2848072803,
+            "lat": 12.9194446,
+            "lon": 100.8962611,
+            "tags": {
+                "name": "Khunsri Resort",
+                "phone": "+66 83 1121213",
+                "tourism": "guest_house",
+                "website": "www.khunsriresort.com"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2848076644,
+            "lat": 12.9170856,
+            "lon": 100.8930889,
+            "tags": {
+                "amenity": "cafe",
+                "name": "C-47 Cafe"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3185969218,
+            "lat": 12.9168643,
+            "lon": 100.9007009,
+            "tags": {
+                "brand": "FamilyMart",
+                "brand:wikidata": "Q1191685",
+                "name": "FamilyMart",
+                "shop": "convenience",
+                "website": "https://www.familymart.co.th/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3204390943,
+            "lat": 12.9244577,
+            "lon": 100.8981063,
+            "tags": {
+                "amenity": "cafe",
+                "name": "Gloss Cafe"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3254858024,
+            "lat": 12.9174088,
+            "lon": 100.8932362,
+            "tags": {
+                "email": "a-pure2010@hotmail.com",
+                "leisure": "sports_centre",
+                "name": "Pure Pure Fitness",
+                "opening_hours": "07:30-24:00",
+                "phone": "+66 89 9348710;+66 38 412498",
+                "sport": "fitness",
+                "website": "https://www.facebook.com/purepurefitness"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3261380771,
+            "lat": 12.9256862,
+            "lon": 100.8991569,
+            "tags": {
+                "brand": "Yamaha;GPX;Royal Enfield",
+                "name": "Mityon Pattaya",
+                "opening_hours": "Mo-Sa 08:00-17:00",
+                "operator": "Mityon Pattaya",
+                "payment:cash": "yes",
+                "payment:credit_cards": "yes",
+                "shop": "motorcycle"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3261380773,
+            "lat": 12.9188565,
+            "lon": 100.8965419,
+            "tags": {
+                "addr:street": "\u0e16\u0e19\u0e19\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17",
+                "name": "Deestone",
+                "shop": "tyres"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3261380777,
+            "lat": 12.9198991,
+            "lon": 100.8974557,
+            "tags": {
+                "name": "TC Car Center",
+                "shop": "car"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3261380778,
+            "lat": 12.9226383,
+            "lon": 100.8976691,
+            "tags": {
+                "addr:street": "\u0e16\u0e19\u0e19\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17",
+                "name": "TRC",
+                "shop": "car_parts"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3261380779,
+            "lat": 12.9252188,
+            "lon": 100.8990246,
+            "tags": {
+                "name": "To big Bike",
+                "shop": "motorcycle"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3261380780,
+            "lat": 12.9203359,
+            "lon": 100.8975965,
+            "tags": {
+                "brand": "Toyo;Yokohama;Nitto;Falken;Maxxis;Hankook;Kumho",
+                "shop": "tyres"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3261380781,
+            "lat": 12.9199459,
+            "lon": 100.896858,
+            "tags": {
+                "addr:street": "\u0e16\u0e19\u0e19\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17",
+                "name": "Yuasa Battery",
+                "shop": "car_parts"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3274295623,
+            "lat": 12.91581,
+            "lon": 100.8947439,
+            "tags": {
+                "amenity": "restaurant",
+                "cuisine": "steak",
+                "name": "Santa Fe"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3324686501,
+            "lat": 12.9207712,
+            "lon": 100.8970607,
+            "tags": {
+                "addr:street": "\u0e16\u0e19\u0e19\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17",
+                "amenity": "cafe",
+                "name": "Big Wing Cafe"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3331666818,
+            "lat": 12.9191254,
+            "lon": 100.8918759,
+            "tags": {
+                "name": "Color World",
+                "shop": "paint"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3440255376,
+            "lat": 12.9178376,
+            "lon": 100.8948724,
+            "tags": {
+                "name": "BBSP Bike Shop",
+                "phone": "+66 87 9969475",
+                "shop": "motorcycle",
+                "website": "https://th-th.facebook.com/pages/BBSP-Bikeshop-Pattaya/260398117491399"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3440255380,
+            "lat": 12.917051,
+            "lon": 100.8936612,
+            "tags": {
+                "amenity": "cafe",
+                "name": "Fresh Coffee"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3440255383,
+            "lat": 12.9159779,
+            "lon": 100.8941615,
+            "tags": {
+                "alt_name": "Kentucky Fried Chicken",
+                "amenity": "fast_food",
+                "brand": "KFC",
+                "brand:wikidata": "Q524757",
+                "brand:wikipedia": "en:KFC",
+                "cuisine": "chicken",
+                "delivery": "yes",
+                "internet_access": "no",
+                "name": "KFC",
+                "name:en": "KFC",
+                "name:th": "\u0e40\u0e04 \u0e40\u0e2d\u0e1f \u0e0b\u0e35",
+                "operator": "Kentucky Fried Chicken",
+                "phone": "1150",
+                "smoking": "no",
+                "takeaway": "yes",
+                "website": "https://www.kfc.co.th/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3440255384,
+            "lat": 12.9160638,
+            "lon": 100.8942246,
+            "tags": {
+                "amenity": "fast_food",
+                "brand": "Mister Donut",
+                "brand:en": "Mister Donut",
+                "brand:wikidata": "Q1065819",
+                "cuisine": "donut",
+                "name": "Mister Donut",
+                "name:en": "Mister Donut",
+                "takeaway": "yes"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3440255388,
+            "lat": 12.9176464,
+            "lon": 100.8933489,
+            "tags": {
+                "amenity": "pub",
+                "cuisine": "british",
+                "name": "The London Pie"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3440255389,
+            "lat": 12.9168514,
+            "lon": 100.894013,
+            "tags": {
+                "name": "Sayama",
+                "shop": "travel_agency"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3440255696,
+            "lat": 12.9166161,
+            "lon": 100.8944418,
+            "tags": {
+                "amenity": "restaurant"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3481217537,
+            "lat": 12.9173463,
+            "lon": 100.8953166,
+            "tags": {
+                "brand": "FamilyMart",
+                "brand:wikidata": "Q1191685",
+                "name": "FamilyMart",
+                "shop": "convenience"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3481217539,
+            "lat": 12.9177153,
+            "lon": 100.8945974,
+            "tags": {
+                "name": "In Bed",
+                "phone": "+66 38 374064",
+                "shop": "furniture"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3481217540,
+            "lat": 12.9185836,
+            "lon": 100.8935939,
+            "tags": {
+                "addr:street": "\u0e1e\u0e31\u0e17\u0e22\u0e32\u0e43\u0e15\u0e49",
+                "name": "\u0e01.\u0e20\u0e31\u0e17\u0e23",
+                "name:en": "Kor Patara",
+                "shop": "doityourself"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3481217544,
+            "lat": 12.9192766,
+            "lon": 100.8924285,
+            "tags": {
+                "name": "Pinky Jimmy",
+                "shop": "furniture"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3481217546,
+            "lat": 12.9175298,
+            "lon": 100.8954283,
+            "tags": {
+                "amenity": "cafe",
+                "name": "Story Coffee",
+                "name:th": "\u0420\u044f\u0434\u043e\u043c \u043e\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u043c\u0438\u043d\u0438\u0431\u0430\u0441\u043e\u0432 \u043d\u0430 \u043a\u0430\u043c\u0431\u043e\u0434\u0436\u0443"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3481217549,
+            "lat": 12.9174803,
+            "lon": 100.8950865,
+            "tags": {
+                "brand": "BK Battery",
+                "shop": "car_parts"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3486315339,
+            "lat": 12.9158733,
+            "lon": 100.8947432,
+            "tags": {
+                "name": "SE-ED Books",
+                "shop": "books",
+                "website": "https://www.se-ed.com/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3619460893,
+            "lat": 12.9168503,
+            "lon": 100.8989608,
+            "tags": {
+                "alt_name": "7-11",
+                "brand": "7-Eleven",
+                "brand:website": "http://www.7eleven.co.th/",
+                "brand:wikidata": "Q259340",
+                "brand:wikipedia": "th:\u0e40\u0e0b\u0e40\u0e27\u0e48\u0e19 \u0e2d\u0e35\u0e40\u0e25\u0e1f\u0e40\u0e27\u0e48\u0e19",
+                "name": "7-Eleven",
+                "name:en": "7-Eleven",
+                "shop": "convenience"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3898397357,
+            "lat": 12.9175916,
+            "lon": 100.8957808,
+            "tags": {
+                "brand": "Husqvarna",
+                "motorcycle:sales": "yes",
+                "motorcycle:type": "offroad",
+                "name": "Falcon Power Sport",
+                "phone": "+66 33 009679;+66 88 8838988",
+                "shop": "motorcycle",
+                "website": "https://www.husqvarna-motorcycles.com/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3987612176,
+            "lat": 12.9155099,
+            "lon": 100.8962304,
+            "tags": {
+                "name": "Smile Equipment",
+                "shop": "kitchen"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3987612182,
+            "lat": 12.9192511,
+            "lon": 100.8972754,
+            "tags": {
+                "name": "Nitto",
+                "shop": "tyres"
+            }
+        },
+        {
+            "type": "node",
+            "id": 4045463925,
+            "lat": 12.9224587,
+            "lon": 100.8981485,
+            "tags": {
+                "name": "Factory Mattress",
+                "shop": "furniture"
+            }
+        },
+        {
+            "type": "node",
+            "id": 4045463926,
+            "lat": 12.9225422,
+            "lon": 100.8981723,
+            "tags": {
+                "name": "Ung Motor Shop",
+                "phone": "+66 85 6605570",
+                "shop": "car_parts"
+            }
+        },
+        {
+            "type": "node",
+            "id": 4045535095,
+            "lat": 12.9226977,
+            "lon": 100.8982175,
+            "tags": {
+                "motorcycle:sales": "yes",
+                "motorcycle:type": "scooter",
+                "name": "Speed Bike",
+                "shop": "motorcycle"
+            }
+        },
+        {
+            "type": "node",
+            "id": 4102254667,
+            "lat": 12.9158257,
+            "lon": 100.902367,
+            "tags": {
+                "motorcycle:type": "scooter",
+                "parts": "no",
+                "shop": "motorcycle_repair"
+            }
+        },
+        {
+            "type": "node",
+            "id": 4183691131,
+            "lat": 12.9088772,
+            "lon": 100.8943125,
+            "tags": {
+                "name": "\u041c\u0430\u0433\u0430\u0437\u0438\u043d \u041a\u043e\u0441\u043c\u0435\u0442\u0438\u043a\u0438",
+                "name:ru": "\u0441\u043a\u043b\u0430\u0434\u044b",
+                "shop": "chemist"
+            }
+        },
+        {
+            "type": "node",
+            "id": 4249955970,
+            "lat": 12.9240013,
+            "lon": 100.8980656,
+            "tags": {
+                "addr:street": "\u0e16\u0e19\u0e19\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17",
+                "name": "Boss Snooker",
+                "not:brand:wikidata": "Q491627",
+                "shop": "sports",
+                "sport": "billiards",
+                "website": "http://www.bosssnooker.com/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 4319183417,
+            "lat": 12.9234698,
+            "lon": 100.8979031,
+            "tags": {
+                "name": "Lumber Shop",
+                "shop": "trade",
+                "trade": "timber"
+            }
+        },
+        {
+            "type": "node",
+            "id": 4326460368,
+            "lat": 12.9178843,
+            "lon": 100.8947991,
+            "tags": {
+                "amenity": "cafe",
+                "name": "Chabeydee"
+            }
+        },
+        {
+            "type": "node",
+            "id": 4671326302,
+            "lat": 12.9092583,
+            "lon": 100.8974143,
+            "tags": {
+                "leisure": "swimming_pool"
+            }
+        },
+        {
+            "type": "node",
+            "id": 4671326307,
+            "lat": 12.9081466,
+            "lon": 100.8979428,
+            "tags": {
+                "leisure": "swimming_pool"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5348990922,
+            "lat": 12.9192982,
+            "lon": 100.8922398,
+            "tags": {
+                "addr:housenumber": "63/17",
+                "addr:postcode": "20150",
+                "addr:street": "\u0e1e\u0e31\u0e17\u0e22\u0e32\u0e43\u0e15\u0e49",
+                "amenity": "cafe",
+                "cuisine": "asian;korean;ice_cream",
+                "name:en": "ICE FROST Dessert Cafe",
+                "opening_hours": "Mo-Su 16:00-00:00",
+                "phone": "+66 84 712 1235"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5904160085,
+            "lat": 12.917396,
+            "lon": 100.895236,
+            "tags": {
+                "name:ru": "\u0441\u0442\u043e\u043a\u043e\u0432\u044b\u0439 \u043c\u0430\u0433\u0430\u0437\u0438\u043d \u043a\u043e\u0441\u043c\u0435\u0442\u0438\u043a\u0438",
+                "shop": "cosmetics"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6110560585,
+            "lat": 12.9197261,
+            "lon": 100.8903968,
+            "tags": {
+                "amenity": "cafe",
+                "name:en": "Dripoly"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6753992085,
+            "lat": 12.9142754,
+            "lon": 100.894569,
+            "tags": {
+                "brand": "Tops",
+                "brand:th": "\u0e17\u0e47\u0e2d\u0e1b\u0e2a\u0e4c",
+                "brand:wikidata": "Q7825140",
+                "name": "Tops",
+                "name:ru": "\u0422\u043e\u043f\u0441 \u043c\u0430\u0433\u0430\u0437\u0438\u043d",
+                "shop": "supermarket"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6759859039,
+            "lat": 12.9097524,
+            "lon": 100.8971058,
+            "tags": {
+                "addr:street": "\u0e40\u0e02\u0e32\u0e15\u0e32\u0e42\u0e25",
+                "name": "\u0e40\u0e2d\u0e41\u0e04\u0e25\u0e23\u0e4c \u0e04\u0e25\u0e34\u0e19\u0e34\u0e01\u0e40\u0e27\u0e0a\u0e01\u0e23\u0e23\u0e21",
+                "name:en": "Aclaire Clinic",
+                "phone": "+8882-264-8955",
+                "shop": "beauty"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6760340462,
+            "lat": 12.9097707,
+            "lon": 100.8968443,
+            "tags": {
+                "addr:street": "\u0e40\u0e02\u0e32\u0e15\u0e32\u0e42\u0e25",
+                "amenity": "cafe",
+                "name": "\u0e21\u0e32\u0e19\u0e35 \u0e21\u0e35\u0e19\u0e21",
+                "name:en": "Manee Menom"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6760340463,
+            "lat": 12.9097681,
+            "lon": 100.8968818,
+            "tags": {
+                "name:en": "Red Line",
+                "phone": "+6662-793-2355;+6663-332-5531",
+                "shop": "pest_control"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6760340464,
+            "lat": 12.9097641,
+            "lon": 100.8969194,
+            "tags": {
+                "amenity": "restaurant",
+                "cuisine": "sushi",
+                "name": "\u0e0b\u0e39\u0e0a\u0e34 \u0e0b\u0e39\u0e0a\u0e34",
+                "name:en": "Sushi Sushi",
+                "phone": "+6680-659-6126"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6760340465,
+            "lat": 12.9097628,
+            "lon": 100.8969596,
+            "tags": {
+                "amenity": "restaurant",
+                "cuisine": "japanese",
+                "name": "\u0e0a\u0e32\u0e1a\u0e39\u0e01\u0e39",
+                "name:en": "Shabuku"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6760340466,
+            "lat": 12.9097328,
+            "lon": 100.8972412,
+            "tags": {
+                "addr:street": "\u0e40\u0e02\u0e32\u0e15\u0e32\u0e42\u0e25",
+                "name": "Bread Deli",
+                "shop": "bakery"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6760340468,
+            "lat": 12.9097445,
+            "lon": 100.8971554,
+            "tags": {
+                "addr:street": "\u0e40\u0e02\u0e32\u0e15\u0e32\u0e42\u0e25",
+                "name": "SN Phone",
+                "phone": "+6680-032-3002;+6633-090-880",
+                "shop": "mobile_phone"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6760520470,
+            "lat": 12.9187772,
+            "lon": 100.8965231,
+            "tags": {
+                "addr:street": "\u0e16\u0e19\u0e19\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17",
+                "name": "\u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17 \u0e40\u0e04\u0e0b\u0e35\u0e1a\u0e35 \u0e21\u0e2d\u0e40\u0e15\u0e2d\u0e23\u0e4c \u0e08\u0e33\u0e01\u0e31\u0e14",
+                "shop": "motorcycle"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6760571378,
+            "lat": 12.9195758,
+            "lon": 100.8967571,
+            "tags": {
+                "addr:street": "\u0e16\u0e19\u0e19\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17",
+                "amenity": "restaurant",
+                "name": "\u0e41\u0e15\u0e49\u0e21\u0e27\u0e07\u0e29\u0e4c \u0e42\u0e20\u0e0a\u0e19\u0e32",
+                "opening_hours": "Mo-Su 07:00-19:00,19:00-04:00"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6760571379,
+            "lat": 12.9194922,
+            "lon": 100.8967155,
+            "tags": {
+                "addr:street": "\u0e16\u0e19\u0e19\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17",
+                "name": "\u0e40\u0e0b\u0e1f\u0e44\u0e17\u0e23\u0e4c \u0e2d\u0e2d\u0e42\u0e15\u0e49\u0e40\u0e0b\u0e2d\u0e23\u0e4c\u0e27\u0e34\u0e2a",
+                "repair": "yes",
+                "shop": "tyres"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6760589257,
+            "lat": 12.9198059,
+            "lon": 100.8968174,
+            "tags": {
+                "addr:street": "\u0e16\u0e19\u0e19\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17",
+                "name": "\u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17 \u0e01.\u0e40\u0e08\u0e23\u0e34\u0e0d\u0e22\u0e19\u0e15\u0e4c \u0e08\u0e33\u0e01\u0e31\u0e14",
+                "shop": "motorcycle"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6770120673,
+            "lat": 12.9228973,
+            "lon": 100.897716,
+            "tags": {
+                "addr:street": "\u0e16\u0e19\u0e19\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17",
+                "name": "\u0e1e\u0e31\u0e17\u0e22\u0e32\u0e40\u0e08\u0e23\u0e34\u0e0d\u0e22\u0e19\u0e15\u0e4c",
+                "shop": "motorcycle"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6770211962,
+            "lat": 12.9240972,
+            "lon": 100.8980995,
+            "tags": {
+                "addr:street": "\u0e16\u0e19\u0e19\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17",
+                "brand": "Honda;Yamaha;Suzuki",
+                "motorcycle:sales": "yes;used",
+                "operator": "\u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17 \u0e08\u0e33\u0e01\u0e31\u0e14 \u0e21\u0e2b\u0e32\u0e0a\u0e19 \u0e1e\u0e31\u0e17\u0e22\u0e32\u0e21\u0e2d\u0e40\u0e15\u0e2d\u0e23\u0e4c",
+                "shop": "motorcycle"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6770211967,
+            "lat": 12.9241837,
+            "lon": 100.8981001,
+            "tags": {
+                "addr:street": "\u0e16\u0e19\u0e19\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17",
+                "brand": "Subaru",
+                "brand:wikidata": "Q172741",
+                "car:sales": "yes",
+                "name": "Royde Autohaus",
+                "shop": "car"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6810392685,
+            "lat": 12.9148974,
+            "lon": 100.8944599,
+            "tags": {
+                "addr:street": "\u0e2d\u0e22\u0e39\u0e48\u0e43\u0e19\u0e1a\u0e49\u0e32\u0e19&\u0e1a\u0e35\u0e22\u0e2d\u0e19\u0e14\u0e4c \u0e1e\u0e31\u0e17\u0e22\u0e32\u0e43\u0e15\u0e49",
+                "internet_access": "wlan",
+                "name": "\u0e40\u0e25\u0e40\u0e27\u0e48\u0e19 \u0e40\u0e1f\u0e2d\u0e23\u0e4c\u0e19\u0e34\u0e40\u0e08\u0e2d\u0e23\u0e4c \u0e2a\u0e32\u0e02\u0e32\u0e1e\u0e31\u0e17\u0e22\u0e32",
+                "name:en": "Leven Furniture Pattaya",
+                "opening_hours": "Mo-Su 10:00-19:00",
+                "phone": "083-622-6296",
+                "shop": "furniture",
+                "website": "http://www.levendecor.com"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6838471367,
+            "lat": 12.9230973,
+            "lon": 100.8961952,
+            "tags": {
+                "addr:street": "\u0e2d\u0e23\u0e38\u0e42\u0e13\u0e17\u0e31\u0e22",
+                "name": "\u0e15\u0e31\u0e14\u0e1c\u0e21",
+                "opening_hours": "Mo-Su 09:00-15:00; We off",
+                "shop": "hairdresser"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6987837985,
+            "lat": 12.9190393,
+            "lon": 100.8921023,
+            "tags": {
+                "name:en": "Siam Herb Extra Virgin. Wholesale shop of Thai cosmetics.",
+                "name:ru": "\u043e\u043f\u0442\u043e\u0432\u044b\u0439 \u043c\u0430\u0433\u0430\u0437\u0438\u043d \u043a\u043e\u0441\u043c\u0435\u0442\u0438\u043a\u0438",
+                "opening_hours": "Mo-Su 10:00-22:00",
+                "shop": "cosmetics"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6989372486,
+            "lat": 12.9191213,
+            "lon": 100.8920942,
+            "tags": {
+                "name:en": "Siam Extra Virgin.",
+                "opening_hours": "Mo-Su 10:00-22:00",
+                "shop": "cosmetics"
+            }
+        },
+        {
+            "type": "node",
+            "id": 7069082685,
+            "lat": 12.9186901,
+            "lon": 100.8927563,
+            "tags": {
+                "name:en": "Siam Herb Extra Virgin",
+                "shop": "cosmetics"
+            }
+        },
+        {
+            "type": "node",
+            "id": 7694704585,
+            "lat": 12.9232029,
+            "lon": 100.8984218,
+            "tags": {
+                "addr:housenumber": "138 Moo 10",
+                "addr:postcode": "20150",
+                "addr:street": "\u0e2a\u0e38\u0e02\u0e38\u0e21\u0e27\u0e34\u0e17 \u0e1e\u0e31\u0e17\u0e22\u0e32 73",
+                "email": "asiahomefurnitures@gmail.com",
+                "internet_access": "wlan",
+                "name:en": "Asia Home Furniture",
+                "opening_hours": "Mo-Sa 09:00-12:00, 14:00-18:00",
+                "phone": "+66936373838",
+                "shop": "furniture",
+                "website": "https://www.asiahomefurniture.com/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10156452817,
+            "lat": 12.9186263,
+            "lon": 100.8926821,
+            "tags": {
+                "amenity": "cafe",
+                "name": "De Florist Caf\u00e9"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10770152583,
+            "lat": 12.9087989,
+            "lon": 100.8965112,
+            "tags": {
+                "brand": "Triumph",
+                "brand:wikidata": "Q1140383",
+                "name": "Triumph Pattaya",
+                "shop": "motorcycle"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10923673035,
+            "lat": 12.9197776,
+            "lon": 100.8909987,
+            "tags": {
+                "amenity": "cafe",
+                "brand": "\u0e04\u0e32\u0e40\u0e1f\u0e48 \u0e2d\u0e40\u0e21\u0e0b\u0e2d\u0e19",
+                "brand:en": "Caf\u00e9 Amazon",
+                "brand:th": "\u0e04\u0e32\u0e40\u0e1f\u0e48 \u0e2d\u0e40\u0e21\u0e0b\u0e2d\u0e19",
+                "brand:wikidata": "Q43247503",
+                "cuisine": "coffee_shop",
+                "internet_access": "wlan",
+                "name": "\u0e04\u0e32\u0e40\u0e1f\u0e48 \u0e2d\u0e40\u0e21\u0e0b\u0e2d\u0e19",
+                "name:en": "Caf\u00e9 Amazon",
+                "name:th": "\u0e04\u0e32\u0e40\u0e1f\u0e48 \u0e2d\u0e40\u0e21\u0e0b\u0e2d\u0e19",
+                "opening_hours": "Mo-Su 07:00-19:00",
+                "takeaway": "yes"
+            }
+        },
+        {
+            "type": "node",
+            "id": 11143939324,
+            "lat": 12.9227957,
+            "lon": 100.8966349,
+            "tags": {
+                "shop": "car_repair"
+            }
+        },
+        {
+            "type": "node",
+            "id": 11144106504,
+            "lat": 12.9223014,
+            "lon": 100.8973069,
+            "tags": {
+                "amenity": "restaurant",
+                "cuisine": "thai",
+                "name": "Khaotom Chokanan"
+            }
+        },
+        {
+            "type": "node",
+            "id": 11178659667,
+            "lat": 12.9176987,
+            "lon": 100.9067236,
+            "tags": {
+                "amenity": "restaurant",
+                "name": "Water L' eau Restaurant and Pool"
+            }
+        },
+        {
+            "type": "node",
+            "id": 11181728271,
+            "lat": 12.9250383,
+            "lon": 100.8983219,
+            "tags": {
+                "alt_name": "7-11",
+                "brand": "7-Eleven",
+                "brand:wikidata": "Q259340",
+                "building": "yes",
+                "name": "7-Eleven",
+                "name:en": "7-Eleven",
+                "opening_hours": "24/7",
+                "operator": "\u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17 \u0e0b\u0e35\u0e1e\u0e35 \u0e2d\u0e2d\u0e25\u0e25\u0e4c \u0e08\u0e33\u0e01\u0e31\u0e14 (\u0e21\u0e2b\u0e32\u0e0a\u0e19)",
+                "shop": "convenience",
+                "website": "http://www.7eleven.co.th"
+            }
+        },
+        {
+            "type": "node",
+            "id": 11233757345,
+            "lat": 12.9121246,
+            "lon": 100.9037654,
+            "tags": {
+                "shop": "convenience"
+            }
+        },
+        {
+            "type": "node",
+            "id": 11536069308,
+            "lat": 12.9164619,
+            "lon": 100.8948441,
+            "tags": {
+                "name": "C.K. Residence",
+                "tourism": "hotel"
+            }
+        },
+        {
+            "type": "node",
+            "id": 11697019644,
+            "lat": 12.9181175,
+            "lon": 100.8936653,
+            "tags": {
+                "amenity": "restaurant",
+                "cuisine": "noodle",
+                "name": "\u0e01\u0e4b\u0e27\u0e22\u0e40\u0e15\u0e35\u0e4b\u0e22\u0e27\u0e40\u0e23\u0e37\u0e2d\u0e43\u0e2b\u0e0d\u0e48\u0e40\u0e2e\u0e35\u0e22 \u0e0a."
+            }
+        }
+    ]
+}
