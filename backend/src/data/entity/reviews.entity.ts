@@ -1,38 +1,42 @@
 import { ZodRawShape, z } from "zod";
 
-import { Entity, Column, Generated } from "typeorm";
+import { Entity, Column, Generated, IntegerType } from "typeorm";
 import { AppDataSource } from "../data-source";
 
 @Entity()
-export class ReviewNode {
+export class Review {
   @Column()
   @Generated("uuid")
   id: string;
 
   @Column("text")
-  name: string;
+  node_id: string;
+
+  @Column("int")
+  user_id: number;
 
   @Column("text")
-  city: string;
+  user_name: string;
+
+  @Column("int")
+  rating: number;
 
   @Column("text")
-  lat: string;
-
-  @Column("text")
-  lon: string;
+  comment: string;
 }
 
-export const getMapNodeRepository = () => {
-  return AppDataSource.getRepository(ReviewNode);
+export const getReviewRepository = () => {
+  return AppDataSource.getRepository(Review);
 };
 
 // deifne zod schema here following the class definition above
-export const mapNodeSchema = z.object({
+export const reviewSchema = z.object({
   id: z.string().uuid(),
-  name: z.string(),
-  city: z.string(),
-  lat: z.string(),
-  lon: z.string(),
+  node_id: z.string(),
+  user_id: z.number(),
+  user_name: z.string(),
+  rating: z.number(),
+  comment: z.string(),
 });
 
-export type getMapNodeRepository = ReturnType<typeof getMapNodeRepository>;
+export type ReviewRepository = ReturnType<typeof getReviewRepository>;

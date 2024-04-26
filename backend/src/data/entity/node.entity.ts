@@ -35,4 +35,4 @@ export const mapNodeSchema = z.object({
   lon: z.string(),
 });
 
-export type getMapNodeRepository = ReturnType<typeof getMapNodeRepository>;
+export type MapNodeRepository = ReturnType<typeof getMapNodeRepository>;

@@ -1,8 +1,10 @@
-import { Express, Response } from "express";
+import { Express, NextFunction, Request, Response } from "express";
 import { getUserRepository } from "../data/entity/user.entity";
 import bcrypt from "bcrypt";
 import { z } from "zod";
 import jwt from "jsonwebtoken";
+
+import { reviewSchema } from "../data/entity/reviews.entity";
 
 const setJwtCookie = (res: Response, id: number, expiry: string) => {
   const token = jwt.sign({ userId: id }, process.env.ACCESS_SECRET ?? "", {
@@ -20,11 +22,34 @@ const clearJwtCookie = (res: Response) => {
   res.clearCookie("jwt");
 };
 
+export const verifyToken = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  try {
+    let token = req.header("Authorization");
+
+    if (!token) {
+      return res.status(403).json({ error: "Access Denied" });
+    }
+
+    if (token.startsWith("Bearer ")) {
+      token = token.slice(7, token.length).trimLeft();
+    }
+
+    const verified = jwt.verify(token, process.env.ACCESS_SECRET ?? "");
+    next();
+  } catch (err) {
+    res.status(400).json({ error: err });
+  }
+};
+
 export const registerUserRoutes = (app: Express) => {
   app.post("/api/signup", async (req, res) => {
     const inputSchema = z.object({
       name: z.string(),
-      email: z.string(),
+      email: z.string().email(),
       password: z.string(),
     });
 
@@ -55,7 +80,9 @@ export const registerUserRoutes = (app: Express) => {
 
       setJwtCookie(res, user_id, "30d");
 
-      res.status(201).json(savedUser);
+      res.status(201).json({
+        user_id,
+      });
     } catch (e) {
       res.status(400).json({
         error: e,
@@ -65,7 +92,7 @@ export const registerUserRoutes = (app: Express) => {
 
   app.post("/api/loginUser", async (req, res) => {
     const inputSchema = z.object({
-      email: z.string(),
+      email: z.string().email(),
       password: z.string(),
     });
 
@@ -110,7 +137,9 @@ export const registerUserRoutes = (app: Express) => {
     });
   });
 
-  app.post("/api/addReview", (req, res) => {
-    // add a check for the
+  app.post("/api/addReview", verifyToken, (req, res) => {
+    const inputSchema = z.object({
+      node_id: z.string(),
+    });
   });
 };
