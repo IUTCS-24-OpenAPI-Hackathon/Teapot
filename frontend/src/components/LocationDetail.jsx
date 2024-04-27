@@ -10,6 +10,8 @@ function LocationDetail() {
   const user = useStore((state) => state.user);
   const [reviews, setReviews] = useState([]);
   const [comment, setComment] = useState("");
+  const query = useStore((state) => state.query);
+  const [weather, setWeather] = useState({});
 
   const handleChange = (e) => {
     setComment(e.target.value);
@@ -44,6 +46,14 @@ function LocationDetail() {
       );
       setReviews(res.data);
     };
+
+    const getWeather = async () => {
+      const res = await axios.get(
+        `https://api.open-meteo.com/v1/forecast?latitude=${query.lat}&longitude=${query.lon}&current=temperature_2m,wind_speed_10m`
+      );
+      setWeather(res.data);
+    };
+    getWeather();
     getReviews();
   }, []);
 
@@ -51,7 +61,16 @@ function LocationDetail() {
     <ModalBg>
       <div className="w-[80%] max-w-[500px] bg-bright text-dark rounded-lg p-6">
         <p className="font-bold text-xl">{state.name}</p>
-        <p className="text-sm text-gray-600">{state.description}</p>
+        <p className="text-md text-gray-600 mb-1">{state.description}</p>
+        <p className="font-semibold text-lg">
+          Temperature: {weather?.current.temperature_2m}
+          {weather?.current_units.temperature_2m}
+        </p>
+        <p className="font-semibold text-lg">
+          Wind: {weather?.current.wind_speed_10m}
+          {weather?.current_units.wind_speed_10m}
+        </p>
+
         <p className="font-semibold text-lg underline text-purple mt-2">
           Reviews
         </p>

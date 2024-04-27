@@ -2,12 +2,14 @@ import Button from "./Button";
 import useStore from "../store/store";
 import Input from "./Input";
 import { getAttractionsFromRadius } from "../services/geo";
+import { useState } from "react";
 
 function LocationForm() {
   const location = useStore((state) => state.location);
   const setLocation = useStore((state) => state.setLocation);
   const setAttractions = useStore((state) => state.setAttractions);
   const setQuery = useStore((state) => state.setQuery);
+  const [loading, setLoading] = useState(false);
 
   const handleInput = (e) => {
     const newLocation = {
@@ -36,17 +38,18 @@ function LocationForm() {
       alert("Some of the fields are blank.");
     } else {
       setQuery({
-        lat: Number(location.lat.trim()),
-        lon: Number(location.lon.trim()),
-        radius: Number(location.radius.trim()) * 1000,
+        lat: Number(location.lat),
+        lon: Number(location.lon),
+        radius: Number(location.radius) * 1000,
       });
-
+      setLoading(true);
       setAttractions(
         await getAttractionsFromRadius({
           ...location,
           radius: location.radius * 1000,
         })
       );
+      setLoading(false);
     }
   };
 
@@ -106,6 +109,9 @@ function LocationForm() {
           >
             Submit
           </Button>
+          {loading && (
+            <p className="font-semibold text-xl text-center my-6">Loading...</p>
+          )}
         </div>
       </form>
     </div>

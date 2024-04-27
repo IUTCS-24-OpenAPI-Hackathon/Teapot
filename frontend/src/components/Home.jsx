@@ -24,7 +24,6 @@ function Home() {
       ) : (
         <div className="flex mt-4">
           {!!attractions.length && <Cards />}
-
           <LocationForm />
         </div>
       )}
