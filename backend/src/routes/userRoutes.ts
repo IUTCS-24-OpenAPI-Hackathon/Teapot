@@ -50,7 +50,7 @@ export const verifyToken = async (
       process.env.ACCESS_SECRET ?? ""
     ) as JwtPayload;
 
-    // req.user_id = { id: verified.user_id };
+    req.user_id = verified.user_id;
 
     next();
   } catch (err) {
@@ -189,7 +189,7 @@ export const registerUserRoutes = (app: Express) => {
 
       const user = await userRepo.findOne({
         where: {
-          id: +user_id,
+          id: user_id,
         },
       });
 
@@ -211,4 +211,6 @@ export const registerUserRoutes = (app: Express) => {
       });
     }
   });
+
+  app.get("/api/node", (req, res) => {});
 };
