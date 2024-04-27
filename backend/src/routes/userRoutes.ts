@@ -8,6 +8,7 @@ import {
   getReviewRepository,
   reviewSchema,
 } from "../data/entity/reviews.entity";
+import { getMapNodeRepository } from "../data/entity/node.entity";
 
 const setJwtCookie = (res: Response, id: number, expiry: string) => {
   const token = jwt.sign({ userId: id }, process.env.ACCESS_SECRET ?? "", {
@@ -216,5 +217,23 @@ export const registerUserRoutes = (app: Express) => {
     }
   });
 
-  app.get("/api/node", (req, res) => {});
+  app.post("/api/node", verifyToken, async (req, res) => {
+    const inputSchema = z.object({
+      name: z.string(),
+      city: z.string(),
+      lat: z.string(),
+      lon: z.string(),
+    });
+
+    const { name, city, lat, lon } = inputSchema.parse(req.body);
+
+    const mapNodeRepo = getMapNodeRepository();
+
+    await mapNodeRepo.insert({
+      name,
+      city,
+      lat,
+      lon,
+    });
+  });
 };
