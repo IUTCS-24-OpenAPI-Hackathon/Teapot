@@ -37,7 +37,7 @@ export const verifyToken = async (
   next: NextFunction
 ) => {
   try {
-    let token = req.cookies["jwt"];
+    let token = req.header("Authorization");
 
     if (!token) {
       return res.status(403).json({ error: "Access Denied" });
