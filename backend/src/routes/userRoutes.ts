@@ -14,11 +14,13 @@ const setJwtCookie = (res: Response, id: number, expiry: string) => {
     expiresIn: expiry,
   });
 
-  res.cookie("jwt", token, {
-    httpOnly: true,
-    sameSite: "strict",
-    maxAge: 30 * 24 * 3600 * 1000,
-  });
+  return token;
+
+  // res.cookie("jwt", token, {
+  //   httpOnly: true,
+  //   sameSite: "strict",
+  //   maxAge: 30 * 24 * 3600 * 1000,
+  // });
 };
 
 const clearJwtCookie = (res: Response) => {
@@ -91,9 +93,10 @@ export const registerUserRoutes = (app: Express) => {
 
       const user_id = savedUser.identifiers[0].id;
 
-      setJwtCookie(res, user_id, "30d");
+      const token = setJwtCookie(res, user_id, "30d");
 
       res.status(201).json({
+        token: token,
         user_id,
       });
     } catch (e) {
@@ -127,8 +130,9 @@ export const registerUserRoutes = (app: Express) => {
       const passwordMatched = await bcrypt.compare(password, user.password);
 
       if (user && passwordMatched) {
-        setJwtCookie(res, user.id, "30d");
+        const token = setJwtCookie(res, user.id, "30d");
         res.json({
+          token: token,
           user_id: user.id,
         });
       } else {
