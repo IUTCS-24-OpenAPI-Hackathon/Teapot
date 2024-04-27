@@ -4,7 +4,10 @@ import bcrypt from "bcrypt";
 import { z } from "zod";
 import jwt from "jsonwebtoken";
 
-import { reviewSchema } from "../data/entity/reviews.entity";
+import {
+  getReviewRepository,
+  reviewSchema,
+} from "../data/entity/reviews.entity";
 
 const setJwtCookie = (res: Response, id: number, expiry: string) => {
   const token = jwt.sign({ userId: id }, process.env.ACCESS_SECRET ?? "", {
@@ -22,8 +25,12 @@ const clearJwtCookie = (res: Response) => {
   res.clearCookie("jwt");
 };
 
+interface JwtPayload {
+  user_id: string;
+}
+
 export const verifyToken = async (
-  req: Request,
+  req: any,
   res: Response,
   next: NextFunction
 ) => {
@@ -38,7 +45,13 @@ export const verifyToken = async (
       token = token.slice(7, token.length).trimLeft();
     }
 
-    const verified = jwt.verify(token, process.env.ACCESS_SECRET ?? "");
+    const verified = jwt.verify(
+      token,
+      process.env.ACCESS_SECRET ?? ""
+    ) as JwtPayload;
+
+    req.user_id = { id: verified.user_id };
+
     next();
   } catch (err) {
     res.status(400).json({ error: err });
@@ -115,7 +128,9 @@ export const registerUserRoutes = (app: Express) => {
 
       if (user && passwordMatched) {
         setJwtCookie(res, user.id, "30d");
-        res.json(user);
+        res.json({
+          user_id: user.id,
+        });
       } else {
         res.status(400).json({
           error: "Password did not match",
@@ -130,16 +145,69 @@ export const registerUserRoutes = (app: Express) => {
     }
   });
 
-  app.post("/api/logoutUser", (req, res) => {
+  app.get("/api/logoutUser", (req, res) => {
     clearJwtCookie(res);
     res.status(200).json({
       msg: "logged out successfully",
     });
   });
 
-  app.post("/api/addReview", verifyToken, (req, res) => {
+  app.get("/api/review", (req, res) => {
     const inputSchema = z.object({
       node_id: z.string(),
     });
+
+    try {
+      const { node_id } = inputSchema.parse(req.body);
+
+      const reviewRepo = getReviewRepository();
+      reviewRepo.find({
+        where: {
+          node_id,
+        },
+      });
+    } catch (e) {
+      res.status(400).json({
+        err: e,
+      });
+    }
+  });
+
+  app.post("/api/review", verifyToken, async (req: any, res) => {
+    const inputSchema = z.object({
+      node_id: z.string(),
+      rating: z.number().min(0).max(5),
+      comment: z.string(),
+    });
+
+    try {
+      const { node_id, rating, comment } = inputSchema.parse(req.body);
+
+      const user_id = req.user_id as number;
+      const userRepo = getUserRepository();
+
+      const user = await userRepo.findOne({
+        where: {
+          id: user_id,
+        },
+      });
+
+      const reviewRepo = getReviewRepository();
+      reviewRepo.insert({
+        node_id: node_id,
+        user_id: user?.id,
+        user_name: user?.name,
+        rating: rating,
+        comment: comment,
+      });
+
+      res.json({
+        msg: "added review successfully",
+      });
+    } catch (e) {
+      res.status(400).json({
+        error: e,
+      });
+    }
   });
 };
