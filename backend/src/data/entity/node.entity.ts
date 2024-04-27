@@ -13,6 +13,9 @@ export class MapNode {
   name: string;
 
   @Column("text")
+  description: string;
+
+  @Column("text")
   city: string;
 
   @Column("text")
@@ -30,6 +33,7 @@ export const getMapNodeRepository = () => {
 export const mapNodeSchema = z.object({
   id: z.string().uuid(),
   name: z.string(),
+  description: z.string(),
   city: z.string(),
   lat: z.string(),
   lon: z.string(),
