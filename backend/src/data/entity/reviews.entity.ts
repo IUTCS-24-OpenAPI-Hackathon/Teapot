@@ -5,7 +5,7 @@ import { AppDataSource } from "../data-source";
 
 @Entity()
 export class Review {
-  @Column()
+  @Column("uuid")
   @Generated("uuid")
   id: string;
 
