@@ -221,17 +221,19 @@ export const registerUserRoutes = (app: Express) => {
     const inputSchema = z.object({
       name: z.string(),
       city: z.string(),
+      description: z.string(),
       lat: z.string(),
       lon: z.string(),
     });
 
-    const { name, city, lat, lon } = inputSchema.parse(req.body);
+    const { name, city, description, lat, lon } = inputSchema.parse(req.body);
 
     const mapNodeRepo = getMapNodeRepository();
 
     await mapNodeRepo.insert({
       name,
       city,
+      description,
       lat,
       lon,
     });
