@@ -16,6 +16,7 @@ const useStore = create((set) => ({
   store: "",
   attractions: [],
   user: {},
+  loading: false,
   setAttractions: (newAttractions) =>
     set(() => ({ attractions: newAttractions })),
   setLocation: (newLocation) => set(() => ({ location: newLocation })),
@@ -26,6 +27,7 @@ const useStore = create((set) => ({
   setSelectedLocation: (newLocation) =>
     set(() => ({ selectedLocation: newLocation })),
   setUser: (newUser) => set(() => ({ user: newUser })),
+  setLoading: (newLoading) => set(() => ({ loading: newLoading })),
 }));
 
 export default useStore;

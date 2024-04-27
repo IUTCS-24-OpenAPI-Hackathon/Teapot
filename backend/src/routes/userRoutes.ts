@@ -37,8 +37,9 @@ export const verifyToken = async (
   next: NextFunction
 ) => {
   try {
+    console.log("start");
     let token = req.header("Authorization");
-
+    console.log(token);
     if (!token) {
       return res.status(403).json({ error: "Access Denied" });
     }
@@ -186,6 +187,7 @@ export const registerUserRoutes = (app: Express) => {
     });
 
     try {
+      console.log("try");
       const { node_id, rating, comment } = inputSchema.parse(req.body);
 
       const user_id = req.user_id as number;
@@ -197,8 +199,10 @@ export const registerUserRoutes = (app: Express) => {
         },
       });
 
+      console.log("user:", user);
+
       const reviewRepo = getReviewRepository();
-      reviewRepo.insert({
+      const r = await reviewRepo.insert({
         node_id: node_id,
         user_id: user?.id,
         user_name: user?.name,
@@ -206,8 +210,13 @@ export const registerUserRoutes = (app: Express) => {
         comment: comment,
       });
 
+      console.log("end");
+
       res.json({
-        msg: "added review successfully",
+        node_id,
+        user_name: user?.name,
+        comment,
+        id: r.identifiers[0].id,
       });
     } catch (e) {
       res.status(400).json({

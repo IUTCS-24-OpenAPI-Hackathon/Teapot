@@ -10,6 +10,7 @@ function Search() {
   const [area, setArea] = useState({});
   const setAttractions = useStore((state) => state.setAttractions);
   const setQuery = useStore((state) => state.setQuery);
+  const setLoading = useStore((state) => state.setLoading);
 
   const handleChange = async (e) => {
     setSearch(e.target.value);
@@ -50,13 +51,14 @@ function Search() {
       lon: place.lon,
       radius: 1000,
     });
-    setAttractions(
-      await getAttractions({
-        lat: place.lat,
-        lon: place.lon,
-        city: place.name,
-      })
-    );
+    setLoading(true);
+    const data = await getAttractions({
+      lat: place.lat,
+      lon: place.lon,
+      city: place.name,
+    });
+    setLoading(false);
+    setAttractions(data);
   };
 
   return (

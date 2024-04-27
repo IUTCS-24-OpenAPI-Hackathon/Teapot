@@ -9,12 +9,14 @@ import { Outlet } from "react-router-dom";
 function Home() {
   const attractions = useStore((state) => state.attractions);
   const shouldUseSearch = useStore((state) => state.shouldUseSearch);
+  const loading = useStore((state) => state.loading);
   return (
     <div>
       <Outlet />
       {shouldUseSearch ? (
         <>
           <Search />
+          {loading && <p className="font-semibold text-xl">Loading...</p>}
           {!!attractions.length && <Map />}
         </>
       ) : (

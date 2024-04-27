@@ -15,15 +15,14 @@ const verifyUser = async (id) => {
 };
 
 const login = async (info) => {
-  const res = await axios.post(`${baseUrl}/user/login`, info);
+  const res = await axios.post(`${baseUrl}/loginUser`, info);
   localStorage.setItem("user", JSON.stringify(res.data));
   return res.data;
 };
 
 const logout = async () => {
-  const res = await axios.get(`${baseUrl}/user/logout`);
+  const res = await axios.get(`${baseUrl}/logout`);
   localStorage.removeItem("user");
-  console.log(res.data.message);
 };
 
 const isLoggedIn = () => {

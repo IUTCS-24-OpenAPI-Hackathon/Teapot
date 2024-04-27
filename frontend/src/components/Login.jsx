@@ -14,8 +14,6 @@ function Login() {
   const setUser = useStore((state) => state.setUser);
 
   const navigate = useNavigate();
-  const { search } = useLocation();
-  const redirect = new URLSearchParams(search).get("redirect") || "/board";
 
   const handleChange = (e) => {
     setInfo((prev) => {
@@ -35,7 +33,7 @@ function Login() {
       });
       setUser(user);
       setInfo({ email: "", password: "" });
-      navigate("/board");
+      navigate("/");
     } catch (err) {
       console.log(err.response.data);
     }

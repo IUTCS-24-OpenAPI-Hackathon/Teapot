@@ -33,8 +33,8 @@ function Signup() {
         password: info.password,
       });
       setUser(user);
-      console.log(user);
       setInfo({ name: "", email: "", password: "" });
+      navigate("/");
     } catch (err) {
       console.log(err);
     }

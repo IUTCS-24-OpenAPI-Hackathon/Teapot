@@ -11,10 +11,18 @@ import Signup from "./components/Signup";
 import Home from "./components/Home";
 import ModalBg from "./components/ModalBg";
 import LocationDetail from "./components/LocationDetail";
+import { useEffect } from "react";
 
 function App() {
   const attractions = useStore((state) => state.attractions);
   const selectedLocation = useStore((state) => state.selectedLocation);
+  const setUser = useStore((state) => state.setUser);
+
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      setUser(JSON.parse(localStorage.getItem("user")));
+    }
+  }, []);
 
   return (
     <>
@@ -30,11 +38,7 @@ function App() {
           >
             <Route
               path="/location"
-              element={
-                <ModalBg>
-                  <LocationDetail location={selectedLocation} />
-                </ModalBg>
-              }
+              element={<LocationDetail />}
             />
             <Route
               path="login"
