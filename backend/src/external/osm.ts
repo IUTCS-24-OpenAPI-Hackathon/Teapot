@@ -1,5 +1,6 @@
 // define the osm service schemas and methods to use them here.
 import { z } from "zod";
+import { getMapNodeRepository } from "../data/entity/node.entity";
 
 // const attractionSchema = z.object({
 //   name: z.string(),
@@ -261,9 +262,15 @@ export const findAttractionsAroundCities = async (
     }
   });
 
-  return response.filter((r) => {
+  const osm_data = response.filter((r) => {
     if (r) {
       return r;
     }
   });
+
+  const nodeRepo = getMapNodeRepository();
+  const userData = await nodeRepo.find({
+    where: { city },
+  });
+  return [...osm_data, ...userData];
 };

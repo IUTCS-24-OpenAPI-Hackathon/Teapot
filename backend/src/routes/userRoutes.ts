@@ -226,23 +226,24 @@ export const registerUserRoutes = (app: Express) => {
     }
   });
 
-  app.get("/api/node", verifyToken, async (req, res) => {
+  app.post("/api/node", verifyToken, async (req, res) => {
     const inputSchema = z.object({
-      name: z.string(),
-      description: z.string(),
-      city: z.string(),
+      name: z.array(z.string()),
+      description: z.array(z.string()),
+      city: z.array(z.string()),
       lat: z.number(),
       lon: z.number(),
     });
 
+    console.log(req.body);
     const { name, description, city, lat, lon } = inputSchema.parse(req.body);
 
     const nodeRepo = getMapNodeRepository();
 
     const node = await nodeRepo.insert({
-      name,
-      description,
-      city,
+      name: name[0],
+      description: description[0],
+      city: city[0],
       lat,
       lon,
     });

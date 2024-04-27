@@ -43,7 +43,7 @@ function Map() {
         {attractions.map((att) => (
           <Marker
             key={att.id}
-            position={att.coords}
+            position={[att.lat, att.lon]}
             icon={customIcon}
             eventHandlers={{}}
           >

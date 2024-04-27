@@ -3,6 +3,7 @@ import axios from "axios";
 import Suggestions from "./Suggestions";
 import useStore from "../store/store";
 import { getAttractions } from "../services/geo";
+import { Link } from "react-router-dom";
 
 function Search() {
   const [search, setSearch] = useState("");
@@ -87,6 +88,12 @@ function Search() {
     <div className="mb-6">
       <div className="w-[70%] max-w-[1200px] mx-auto mt-6">
         <div className="w-[80%] max-w-[650px] mx-auto relative">
+          <Link
+            to="/submission"
+            className="bg-purple text-bright py-2 px-2 min-w-20 rounded-lg mt-3 absolute right-[-120px]"
+          >
+            Add Location
+          </Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"

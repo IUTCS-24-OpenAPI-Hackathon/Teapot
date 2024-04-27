@@ -12,6 +12,7 @@ import Home from "./components/Home";
 import ModalBg from "./components/ModalBg";
 import LocationDetail from "./components/LocationDetail";
 import { useEffect } from "react";
+import AddForm from "./components/AddForm";
 
 function App() {
   const attractions = useStore((state) => state.attractions);
@@ -47,6 +48,10 @@ function App() {
             <Route
               path="signup"
               element={<Signup />}
+            />
+            <Route
+              path="/submission"
+              element={<AddForm />}
             />
           </Route>
           <Route element={<RequireAuth />}></Route>
