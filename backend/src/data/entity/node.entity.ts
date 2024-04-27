@@ -13,13 +13,16 @@ export class MapNode {
   name: string;
 
   @Column("text")
+  description: string;
+
+  @Column("text")
   city: string;
 
-  @Column("text")
-  lat: string;
+  @Column("int")
+  lat: number;
 
-  @Column("text")
-  lon: string;
+  @Column("int")
+  lon: number;
 }
 
 export const getMapNodeRepository = () => {
@@ -31,8 +34,8 @@ export const mapNodeSchema = z.object({
   id: z.string().uuid(),
   name: z.string(),
   city: z.string(),
-  lat: z.string(),
-  lon: z.string(),
+  lat: z.number(),
+  lon: z.number(),
 });
 
 export type MapNodeRepository = ReturnType<typeof getMapNodeRepository>;
