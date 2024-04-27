@@ -37,31 +37,31 @@ function AddForm() {
 
   return (
     <ModalBg>
-      <div>
+      <div className="w-[80%] max-w-[500px] bg-bright text-dark rounded-lg p-6 flex flex-col gap-4">
         <input
           className="bg-gray-300 py-2 px-4 rounded-xl shadow-[0_2px_3px_rgb(0,0,0,0.15)] w-full"
-          placeholder="Write a review"
+          placeholder="Name"
           name="name"
           value={data.name}
           onChange={handleChange}
         />
         <input
           className="bg-gray-300 py-2 px-4 rounded-xl shadow-[0_2px_3px_rgb(0,0,0,0.15)] w-full"
-          placeholder="Write a review"
+          placeholder="Description"
           name="description"
           value={data.description}
           onChange={handleChange}
         />
         <input
           className="bg-gray-300 py-2 px-4 rounded-xl shadow-[0_2px_3px_rgb(0,0,0,0.15)] w-full"
-          placeholder="Write a review"
+          placeholder="City"
           name="city"
           value={data.city}
           onChange={handleChange}
         />
         <input
           className="bg-gray-300 py-2 px-4 rounded-xl shadow-[0_2px_3px_rgb(0,0,0,0.15)] w-full"
-          placeholder="Write a review"
+          placeholder="Latitude"
           name="lat"
           value={data.lat}
           onChange={handleChange}
@@ -69,13 +69,18 @@ function AddForm() {
         />
         <input
           className="bg-gray-300 py-2 px-4 rounded-xl shadow-[0_2px_3px_rgb(0,0,0,0.15)] w-full"
-          placeholder="Write a review"
+          placeholder="Longitude"
           name="lon"
           value={data.lon}
           onChange={handleChange}
           type="number"
         />
-        <button onClick={handleSubmit}>Submit</button>
+        <button
+          className="bg-purple text-bright py-2 px-8 min-w-20 rounded-lg mt-2"
+          onClick={handleSubmit}
+        >
+          Submit
+        </button>
       </div>
     </ModalBg>
   );
