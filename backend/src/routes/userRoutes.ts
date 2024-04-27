@@ -35,7 +35,7 @@ export const verifyToken = async (
   next: NextFunction
 ) => {
   try {
-    let token = req.header("Authorization");
+    let token = req.cookies["jwt"];
 
     if (!token) {
       return res.status(403).json({ error: "Access Denied" });
@@ -50,7 +50,7 @@ export const verifyToken = async (
       process.env.ACCESS_SECRET ?? ""
     ) as JwtPayload;
 
-    req.user_id = { id: verified.user_id };
+    // req.user_id = { id: verified.user_id };
 
     next();
   } catch (err) {
@@ -152,20 +152,21 @@ export const registerUserRoutes = (app: Express) => {
     });
   });
 
-  app.get("/api/review", (req, res) => {
+  app.get("/api/review", async (req, res) => {
     const inputSchema = z.object({
       node_id: z.string(),
     });
 
     try {
-      const { node_id } = inputSchema.parse(req.body);
+      const { node_id } = inputSchema.parse(req.query);
 
       const reviewRepo = getReviewRepository();
-      reviewRepo.find({
+      const response = await reviewRepo.find({
         where: {
-          node_id,
+          node_id: node_id,
         },
       });
+      res.json(response);
     } catch (e) {
       res.status(400).json({
         err: e,
@@ -188,7 +189,7 @@ export const registerUserRoutes = (app: Express) => {
 
       const user = await userRepo.findOne({
         where: {
-          id: user_id,
+          id: +user_id,
         },
       });
 

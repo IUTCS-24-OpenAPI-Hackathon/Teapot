@@ -1,11 +1,11 @@
 import { ZodRawShape, z } from "zod";
 
-import { Entity, Column, Generated } from "typeorm";
+import { Entity, Column, Generated, PrimaryColumn } from "typeorm";
 import { AppDataSource } from "../data-source";
 
 @Entity()
 export class MapNode {
-  @Column()
+  @PrimaryColumn("uuid")
   @Generated("uuid")
   id: string;
 

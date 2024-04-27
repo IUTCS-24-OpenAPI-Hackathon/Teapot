@@ -1,11 +1,11 @@
 import { ZodRawShape, z } from "zod";
 
-import { Entity, Column, Generated, IntegerType } from "typeorm";
+import { Entity, Column, Generated, IntegerType, PrimaryColumn } from "typeorm";
 import { AppDataSource } from "../data-source";
 
 @Entity()
 export class Review {
-  @Column("uuid")
+  @PrimaryColumn("uuid")
   @Generated("uuid")
   id: string;
 
