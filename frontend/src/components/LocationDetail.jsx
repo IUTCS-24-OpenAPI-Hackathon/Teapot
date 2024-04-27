@@ -63,12 +63,12 @@ function LocationDetail() {
         <p className="font-bold text-xl">{state.name}</p>
         <p className="text-md text-gray-600 mb-1">{state.description}</p>
         <p className="font-semibold text-lg">
-          Temperature: {weather?.current.temperature_2m}
-          {weather?.current_units.temperature_2m}
+          Temperature: {weather?.current?.temperature_2m}
+          {weather?.current_units?.temperature_2m}
         </p>
         <p className="font-semibold text-lg">
-          Wind: {weather?.current.wind_speed_10m}
-          {weather?.current_units.wind_speed_10m}
+          Wind: {weather?.current?.wind_speed_10m}
+          {weather?.current_units?.wind_speed_10m}
         </p>
 
         <p className="font-semibold text-lg underline text-purple mt-2">
