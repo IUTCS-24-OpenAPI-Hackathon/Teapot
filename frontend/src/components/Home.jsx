@@ -16,12 +16,15 @@ function Home() {
       {shouldUseSearch ? (
         <>
           <Search />
-          {loading && <p className="font-semibold text-xl">Loading...</p>}
+          {loading && (
+            <p className="font-semibold text-xl text-center my-4">Loading...</p>
+          )}
           {!!attractions.length && <Map />}
         </>
       ) : (
         <div className="flex mt-4">
           {!!attractions.length && <Cards />}
+
           <LocationForm />
         </div>
       )}

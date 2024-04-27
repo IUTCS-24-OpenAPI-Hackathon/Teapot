@@ -22,7 +22,7 @@ function Header() {
 
   return (
     <header className="h-[90px] bg-dark flex justify-center items-center">
-      <div className="w-[90%] max-w-[900px] mx-auto flex justify-end items-center">
+      <div className="w-[90%] max-w-[900px] mx-auto flex justify-between items-center">
         <Button
           type="button"
           color="bright"

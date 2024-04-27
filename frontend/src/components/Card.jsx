@@ -4,7 +4,8 @@ function Card({ name, description }) {
       <div className="w-[100px] h-[100px] bg-purple"></div>
       <div>
         <p className="text-xl font-extrabold">{name}</p>
-        <p>{description[0]}</p>
+        <p className="text-lg">{description[0]}</p>
+        <p>No reviews yet.</p>
       </div>
     </div>
   );

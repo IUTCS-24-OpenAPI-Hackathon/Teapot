@@ -16,20 +16,25 @@ function LocationDetail() {
   };
 
   const handlePost = async () => {
-    const res = await axios.post(
-      "http://localhost:3000/api/review",
-      {
-        node_id: state.id.toString(),
-        rating: 3,
-        comment: comment,
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${user.token}`,
+    if (comment.trim() == "") {
+      alert("Review cannot be blank");
+    } else {
+      const res = await axios.post(
+        "http://localhost:3000/api/review",
+        {
+          node_id: state.id.toString(),
+          rating: 3,
+          comment: comment,
         },
-      }
-    );
-    setReviews([res.data, ...reviews]);
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
+      setReviews([res.data, ...reviews]);
+      setComment("");
+    }
   };
 
   useEffect(() => {
@@ -82,9 +87,7 @@ function LocationDetail() {
           {reviews.map((review) => (
             <div className="bg-gray-300 py-2 px-4 rounded-xl mt-2">
               <p className="text-lg font-semibold">{review.user_name}</p>
-              <p className="ml-2 mt-[-4px] text-sm text-dark">
-                {review.comment}
-              </p>
+              <p className="mt-[-4px] text-sm text-dark">{review.comment}</p>
             </div>
           ))}
         </div>

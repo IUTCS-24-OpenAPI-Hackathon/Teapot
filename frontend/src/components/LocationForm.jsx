@@ -32,17 +32,22 @@ function LocationForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setQuery({
-      lat: Number(location.lat),
-      lon: Number(location.lon),
-      radius: Number(location.radius) * 1000,
-    });
-    setAttractions(
-      await getAttractionsFromRadius({
-        ...location,
-        radius: location.radius * 1000,
-      })
-    );
+    if (!location.lat || !location.lon || !location.radius) {
+      alert("Some of the fields are blank.");
+    } else {
+      setQuery({
+        lat: Number(location.lat.trim()),
+        lon: Number(location.lon.trim()),
+        radius: Number(location.radius.trim()) * 1000,
+      });
+
+      setAttractions(
+        await getAttractionsFromRadius({
+          ...location,
+          radius: location.radius * 1000,
+        })
+      );
+    }
   };
 
   return (

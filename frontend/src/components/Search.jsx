@@ -33,10 +33,32 @@ function Search() {
     }
   };
 
+  const handleSearch = async () => {
+    setSearch(e.target.value);
+
+    if (e.target.value.length > 2) {
+      const res = await fetch(
+        `https://photon.komoot.io/api/?q=${search}&limit=5`,
+        { mode: "cors" }
+      );
+      let data = await res.json();
+      data = data.features;
+      data = data.filter((item) => {
+        return (item.properties.type = "city");
+      });
+      setSugg(data);
+    }
+
+    if (e.target.value.length <= 2) {
+      setSugg([]);
+    }
+  };
+
   const handleClick = async (id) => {
     let place = sugg.find((item) => {
       return item.properties.osm_id == id;
     });
+    let country = place.properties.country;
     place = {
       name: place.properties.name,
       lat: place.geometry.coordinates[1],
@@ -44,7 +66,7 @@ function Search() {
     };
     console.log(place);
     setSugg([]);
-    setSearch("");
+    setSearch(`${place.name}, ${country}`);
     setArea(place);
     setQuery({
       lat: place.lat,
@@ -83,7 +105,10 @@ function Search() {
             onChange={handleChange}
             placeholder="Places to go, things to do, hotels..."
           />
-          <button className="font-bold bg-purple py-3 px-6 text-bright rounded-full absolute right-4 top-2">
+          <button
+            className="font-bold bg-purple py-3 px-6 text-bright rounded-full absolute right-4 top-2"
+            onClick={handleSearch}
+          >
             Search
           </button>
           {!!sugg.length && (
